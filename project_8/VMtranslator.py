@@ -309,10 +309,10 @@ def getFileNames():
     return (asmFname, vmFiles)
 
 def main():
+    '''
+    The main functions which carrries out all the functionality.
+    '''
     asmFname, vmFiles = getFileNames()
-    #asmFname, vmFiles = ('SimpleFunction.asm',['SimpleFunction.vm'])
-    # asmFname now contains the name of the file to output to.
-    # vmFiles is a list contianing the names of VM files to be translated.
     d = CodeWriter(asmFname)
     for file in vmFiles:
         z = Parser(file)
